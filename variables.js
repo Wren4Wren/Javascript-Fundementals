@@ -25,10 +25,12 @@
 // dinner = "Green Tea";
 // console.log(`Today is ${day}. For breakfast, I will have ${breakfast}. For lunch, I'll eat ${lunch}; and for dinner, I'll slurrrp ${dinner}.`);
 
-todayDate = new Date('10/05/2022');
-birthDate = new Date('01/01/1997');
+todayDate = new Date("10/05/2022");
+birthDate = new Date("01/01/1997");
 
-timeDifference = todayDate.getTime() - birthDate.getTime()
-daysDifference = Math.round(timeDifference/(1000*60*60*24))
+timeDifference = todayDate.getTime() - birthDate.getTime();
+daysDifference = Math.round(timeDifference / (1000 * 60 * 60 * 24));
 
-console.log(`The difference between ${todayDate} and ${birthDate} is ${daysDifference} days.`)
+console.log(
+  `The difference between ${todayDate} and ${birthDate} is ${daysDifference} days.`
+);

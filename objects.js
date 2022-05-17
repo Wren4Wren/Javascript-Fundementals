@@ -94,39 +94,29 @@
 
 // Activity 3
 
-// const coffeeShop = {
-//     branch: "Manchester",
-//     drinksWithPrices: [
-//         ""
-//     ],
-//     foodWithPrices: [],
-//     drinksOrdered() {},
-//     foodOrdered() {}
-// }
-// console.log()
-
 let order = [];
 const coffeeShop = {
   branch: "manchester",
   drinksWithPrices: {
-    tea: 1.0,
-    americano: 2.0,
-    mocha: 3.0,
-    latte: 3.0,
-    water: 0,
+    tea: 1.5,
+    americano: 2.7,
+    mocha: 2.5,
+    latte: 2.0,
+    cappucino: 1.8,
+    water: 500,
   },
   foodWithPrices: {
-    salad: 2.0,
+    packetOfCrisp: 2.0,
     sandwich: 3.0,
-    tunaJacket: 4.5,
-    grape: 15.0,
+    prawnCocktail: 2.5,
+    fruit: 1.0,
   },
-  drinksOrdered(drink1, drink2) {
+  drinksOrdered(drink1, drink6) {
     let drinks = Object.keys(this.drinksWithPrices);
     let drinkValues = Object.values(this.drinksWithPrices);
     order.push(drinkValues[drinks.indexOf(drink1)]);
-    order.push(drinkValues[drinks.indexOf(drink2)]);
-    return `For drinks you've ordered ${drink1} and ${drink2}`;
+    order.push(drinkValues[drinks.indexOf(drink6)]);
+    return `For drinks you've ordered ${drink1} and ${drink6}`;
   },
   foodOrdered(food1, food2) {
     let foods = Object.keys(this.foodWithPrices);
@@ -136,8 +126,8 @@ const coffeeShop = {
     return `For food you've ordered ${food1} and ${food2}`;
   },
 };
-console.log(coffeeShop.drinksOrdered("tea", "mocha"));
-console.log(coffeeShop.foodOrdered("salad", "grape"));
+console.log(coffeeShop.drinksOrdered("tea", "water"));
+console.log(coffeeShop.foodOrdered("Packet of crisp", "fruit"));
 let total = 0;
 for (i = 0; i < order.length; i++) {
   total += order[i];
